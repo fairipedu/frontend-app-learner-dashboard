@@ -13,10 +13,9 @@ export const LearnerDashboardHeader = () => (
     <ConfirmEmailBanner />
     <CollapsedHeader />
     <ExpandedHeader />
-    <MasqueradeBar />
   </>
 );
-
+//<MasqueradeBar />
 LearnerDashboardHeader.propTypes = {};
 
 export default LearnerDashboardHeader;

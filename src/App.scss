@@ -26,33 +26,39 @@ $input-focus-box-shadow: $input-box-shadow; // hack to get upgrade to paragon 4.
   input[type=checkbox] {
     transform: none;
   }
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-
+  
+  
+  .top-wrapper {
+    display:flex;
+    justify-content:start;
+    align-items: stretch;
+    
+  }
   main {
-    flex-grow: 1;
+    flex:1 1 auto;
   }
 
   header {
-    flex: 0 0 auto;
-
-    .logo {
-      display: block;
-      box-sizing: content-box;
-      position: relative;
-      top: 0.1em;
-      height: 1.75rem;
-      margin-right: 1rem;
-      img {
-        display: block;
-        height: 100%;
+    min-height: 100vh;
+    flex: 0 0 190px;
+    background:#27304D;
+    .logo-wrap {
+      padding:24px 0px;
+      text-align:center;
+      display:block;
+      width:100%;
+      
+      .logo {
+        display:inline-block;
+        width:100%;
+        max-width:144px;
       }
     }
+    
   }
 
   footer {
-    flex: 0;
+    flex: 1 1 100%;
   }
 }
 

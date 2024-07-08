@@ -44,8 +44,9 @@ export const CollapseMenuBody = ({ isOpen }) => {
         {formatMessage(messages.discoverNew)}
       </Button>
       <Button as="a" href={getConfig().SUPPORT_URL} variant="inverse-primary">
-        {formatMessage(messages.help)}
+        {formatMessage(messages.help)}ab
       </Button>
+      
       {authenticatedUser && (
         <>
           {!!dashboard && (
@@ -93,6 +94,7 @@ export const CollapseMenuBody = ({ isOpen }) => {
           </Button>
         </>
       )}
+      
     </div>
   );
 };

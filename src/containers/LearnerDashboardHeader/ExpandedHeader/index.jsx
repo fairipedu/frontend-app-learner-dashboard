@@ -26,10 +26,9 @@ export const ExpandedHeader = () => {
   }
 
   return (
-    <header className="d-flex shadow-sm align-items-center learner-variant-header pl-4">
-      <div className="flex-grow-1 d-flex align-items-center">
+    <header className="">
+      <div className="">
         <BrandLogo />
-
         <Button
           as="a"
           href="/"
@@ -55,6 +54,7 @@ export const ExpandedHeader = () => {
         >
           {formatMessage(messages.discoverNew)}
         </Button>
+        <Button>테스트</Button>
         <span className="flex-grow-1" />
         <Button
           as="a"

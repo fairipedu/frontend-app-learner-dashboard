@@ -67,6 +67,9 @@ export const AuthenticatedUserDropdown = () => {
           <Dropdown.Item href={getConfig().LOGOUT_URL}>
             {formatMessage(messages.signOut)}
           </Dropdown.Item>
+          <Dropdown.Item href="#">
+            test
+          </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>
     )

@@ -93,7 +93,7 @@ export const App = () => {
         <link rel="shortcut icon" href={getConfig().FAVICON_URL} type="image/x-icon" />
         {optimizelyScript()}
       </Helmet>
-      <div>
+      <div className="top-wrapper">
         <AppWrapper>
           <LearnerDashboardHeader />
           <main>
@@ -107,9 +107,10 @@ export const App = () => {
                   <Dashboard />
                 </ExperimentProvider>
               )}
+              <FooterSlot />
           </main>
         </AppWrapper>
-        <FooterSlot />
+        
         <ZendeskFab />
       </div>
     </>

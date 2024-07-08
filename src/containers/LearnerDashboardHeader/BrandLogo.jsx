@@ -12,10 +12,10 @@ export const BrandLogo = () => {
   const dashboard = reduxHooks.useEnterpriseDashboardData();
 
   return (
-    <a href={dashboard?.url || '/'} className="mx-auto">
+    <a href={dashboard?.url || '/'} className="logo-wrap">
       <img
-        className="logo py-3"
-        src={getConfig().LOGO_URL}
+        className="logo"
+        src="../logo_white.png"
         alt={formatMessage(messages.logoAltText)}
       />
     </a>
