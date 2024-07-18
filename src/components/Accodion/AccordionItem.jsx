@@ -1,7 +1,11 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AccordionItem = (active, handleToggle, subNavList) => {
+const AccordionItem = ({
+  active,
+  handleToggle,
+  subNavList,
+}) => {
   const contentEl = useRef();
 
   const {
