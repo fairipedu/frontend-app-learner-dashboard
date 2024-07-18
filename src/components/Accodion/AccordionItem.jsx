@@ -49,7 +49,7 @@ AccordionItem.propsTypes = {
   props: PropTypes.shape({
     handleToggle: PropTypes.func.isRequired,
     active: PropTypes.number.isRequired,
-    subNavList: PropTypes.array(PropTypes.shape({
+    subNavList: PropTypes.arrayOf(PropTypes.shape({
       header: PropTypes.string,
       id: PropTypes.number,
       icon: PropTypes.string,
