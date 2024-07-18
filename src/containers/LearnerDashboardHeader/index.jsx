@@ -1,6 +1,6 @@
 import React from 'react';
 
-import MasqueradeBar from 'containers/MasqueradeBar';
+
 import ConfirmEmailBanner from './ConfirmEmailBanner';
 
 import CollapsedHeader from './CollapsedHeader';
@@ -16,7 +16,7 @@ export const LearnerDashboardHeader = () => (
     
   </>
 );
-//<MasqueradeBar />
+
 LearnerDashboardHeader.propTypes = {};
 
 export default LearnerDashboardHeader;
