@@ -26,5 +26,7 @@ const AccordionItem = (props) => {
     </div>
   )
 };
-
+AccordionItem.propsTypes = {
+  props: PropTypes.object,
+};
 export default AccordionItem;
