@@ -50,11 +50,10 @@ export const Aside = () => {
       <BrandLogo />
       <ul className="fe-nav">
         {
-          asideList.map((item) => {
-            return (
-              <AccordionItem key={item.id} active={active} handleToggle={handleToggle} subNavList={item} />
-            );
-          })
+          asideList.map((item) => (
+            <AccordionItem active={active} handleToggle={handleToggle} subNavList={item} />
+          );
+          )
         }
       </ul>
     </>

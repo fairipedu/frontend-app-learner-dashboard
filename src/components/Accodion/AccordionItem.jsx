@@ -47,7 +47,6 @@ const AccordionItem = (props) => {
 
 AccordionItem.propTypes = {
   props: PropTypes.shape({
-    key: PropTypes.number.isRequired,
     active: PropTypes.string,
     handleToggle: PropTypes.func,
     subNavList: PropTypes.shape({
