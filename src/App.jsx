@@ -26,11 +26,11 @@ import fakeData from 'data/services/lms/fakeData/courses';
 
 import AppWrapper from 'containers/WidgetContainers/AppWrapper';
 import LearnerDashboardHeader from 'containers/LearnerDashboardHeader';
+import UserHeader from 'containers/LearnerDashboardHeader/UserHeader';
 
 import { getConfig } from '@edx/frontend-platform';
 import messages from './messages';
 import './App.scss';
-import UserHeader from 'containers/LearnerDashboardHeader/UserHeader';
 
 export const App = () => {
   const { authenticatedUser } = React.useContext(AppContext);
@@ -109,10 +109,9 @@ export const App = () => {
                   <Dashboard />
                 </ExperimentProvider>
               )}
-              <FooterSlot />
+            <FooterSlot />
           </main>
         </AppWrapper>
-        
         <ZendeskFab />
       </div>
     </>
