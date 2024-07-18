@@ -27,6 +27,10 @@ const AccordionItem = (props) => {
   )
 };
 AccordionItem.propsTypes = {
-  props: PropTypes.object,
+  props: PropTypes.shape({
+    handdleToggle: PropTypes.string,
+    active: PropTypes.bool,
+    subNavList: PropTypes.object,
+  })
 };
 export default AccordionItem;
