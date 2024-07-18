@@ -54,7 +54,7 @@ export const Aside = () => {
           asideList.map((item) => {
             itemKey += 1;
             return (
-              <AccordionItem key={itemKey} active={active} handleToggle={handleToggle} subNavList={item} />
+              <AccordionItem key={item.id} active={active} handleToggle={handleToggle} subNavList={item} />
             );
           })
         }
