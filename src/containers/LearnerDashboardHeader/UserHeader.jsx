@@ -7,7 +7,7 @@ export const UserHeader = () => {
   return (
 
     <AuthenticatedUserDropdown />
-    
+
   );
 };
 

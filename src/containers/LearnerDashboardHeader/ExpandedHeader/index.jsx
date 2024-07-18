@@ -5,8 +5,8 @@ import Aside from '../../../components/Aside';
 
 export const ExpandedHeader = () => {
 
-  const isCollapsed = useIsCollapsed();  
-  
+  const isCollapsed = useIsCollapsed();
+
   if (isCollapsed) {
     return null;
   }
