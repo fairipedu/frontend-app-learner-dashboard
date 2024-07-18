@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 
 const AccordionItem = (props) => {
   const contentEl = useRef();
