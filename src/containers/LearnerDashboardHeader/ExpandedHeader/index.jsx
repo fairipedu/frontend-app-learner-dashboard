@@ -1,22 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { useIntl } from '@edx/frontend-platform/i18n';
-
-import urls from 'data/services/lms/urls';
-import { reduxHooks } from 'hooks';
-
-import { useIsCollapsed, findCoursesNavClicked } from '../hooks';
-
+import { useIsCollapsed } from '../hooks';
 import Aside from '../../../components/Aside';
 
 export const ExpandedHeader = () => {
 
-  const { courseSearchUrl } = reduxHooks.usePlatformSettingsData();
-  const isCollapsed = useIsCollapsed();
-
-  const exploreCoursesClick = findCoursesNavClicked(
-    urls.baseAppUrl(courseSearchUrl),
-  );
+  const isCollapsed = useIsCollapsed();  
   
   if (isCollapsed) {
     return null;
@@ -27,6 +16,7 @@ export const ExpandedHeader = () => {
         <Aside />
     </header>
   );
+
 };
 
 ExpandedHeader.propTypes = {};
