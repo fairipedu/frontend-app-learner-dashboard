@@ -2,12 +2,8 @@ import React from 'react';
 
 import AuthenticatedUserDropdown from './ExpandedHeader/AuthenticatedUserDropdown';
 
-const UserHeader = () => {
-
-  return (
+const UserHeader = () => (
     <AuthenticatedUserDropdown />
-  )
-
-};
+  );
 
 export default UserHeader;
