@@ -45,7 +45,7 @@ export const Aside = () => {
       setActive(idx);
     }
   };
-  let itemKey = 0;
+  var itemKey = -1;
   return (
     <>
       <BrandLogo />
@@ -53,8 +53,11 @@ export const Aside = () => {
         {
 
           asideList.map((item) => {
-            <AccordionItem key={itemKey} active={active} handleToggle={handleToggle} subNavList={item} />
             itemKey += 1;
+            return (
+              <AccordionItem key={itemKey} active={active} handleToggle={handleToggle} subNavList={item} />
+            )
+
           })
         }
       </ul>
