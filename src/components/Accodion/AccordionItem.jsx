@@ -6,25 +6,26 @@ const AccordionItem = (props) => {
   const {
     handleToggle,
     active,
-    subNavList
+    subNavList,
   } = props;
   const {
     header,
     id,
     icon,
-    subNav
+    subNav,
   } = subNavList;
 
   return (
     <div className="rc-accordion-card">
       <div className="rc-accordion-header">
-        <div className={`rc-accordion-toggle p-3 ${active === id ? 'active' : ''}`}
+        <div
+          className={`rc-accordion-toggle p-3 ${active === id ? 'active' : ''}`}
           onClick={() => handleToggle(id)}
           aria-hidden="true"
         >
           { /* subNav.length > 0 */}
           <h5 className="rc-accordion-title"><i className={icon} /> &nbsp; {header}</h5>
-          <i className="ri-arrow-down-s-line arrow"></i>
+          <i className="ri-arrow-down-s-line arrow" />
         </div>
       </div>
       <div
@@ -48,8 +49,8 @@ AccordionItem.defaultProps = {
 };
 AccordionItem.propsTypes = {
   props: PropTypes.shape({
-    handdleToggle: PropTypes.func,
-    active: PropTypes.bool,
+    handleToggle: PropTypes.func,
+    active: PropTypes.string,
     subNavList: PropTypes.shape({
       header: PropTypes.string,
       id: PropTypes.string,
