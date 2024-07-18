@@ -48,10 +48,10 @@ const AccordionItem = (props) => {
 AccordionItem.propTypes = {
   props: PropTypes.shape({
     handleToggle: PropTypes.func,
-    active: PropTypes.number,
+    active: PropTypes.string,
     subNavList: PropTypes.shape({
       header: PropTypes.string,
-      id: PropTypes.number,
+      id: PropTypes.string,
       icon: PropTypes.string,
       subNav: PropTypes.arrayOf(PropTypes.string),
     }),
