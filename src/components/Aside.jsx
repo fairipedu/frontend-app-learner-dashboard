@@ -34,7 +34,7 @@ export const Aside = () => {
       header: '이용안내',
       icon: 'ri-chat-smile-fill',
       subNav: [],
-    }
+    },
   ];
   const [active, setActive] = useState(null);
 
