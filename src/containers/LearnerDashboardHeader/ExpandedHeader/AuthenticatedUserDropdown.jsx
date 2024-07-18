@@ -3,7 +3,7 @@ import React from 'react';
 import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
 import { AppContext } from '@edx/frontend-platform/react';
-import { AvatarButton, Dropdown, Badge } from '@openedx/paragon';
+import { AvatarButton, Badge, Dropdown } from '@openedx/paragon';
 
 import { reduxHooks } from 'hooks';
 
@@ -13,6 +13,7 @@ export const AuthenticatedUserDropdown = () => {
   const { formatMessage } = useIntl();
   const { authenticatedUser } = React.useContext(AppContext);
   const dashboard = reduxHooks.useEnterpriseDashboardData();
+  
 
   return (
     authenticatedUser && (
@@ -22,7 +23,6 @@ export const AuthenticatedUserDropdown = () => {
           src={authenticatedUser.profileImage}
           id="user"
           variant="light"
-          className="p-4"
         >
           <span data-hj-suppress className="d-md-inline">
             {authenticatedUser.username}
@@ -33,11 +33,11 @@ export const AuthenticatedUserDropdown = () => {
             <>
               <Dropdown.Header>{formatMessage(messages.dashboardSwitch)}</Dropdown.Header>
               <Dropdown.Item as="a" href="/edx-dashboard" className="active">
-                {formatMessage(messages.dashboardPersonal)}
+                {formatMessage(messages.dashboardPersonal)}a
               </Dropdown.Item>
               {!!dashboard && (
                 <Dropdown.Item as="a" href={dashboard.url} key={dashboard.label}>
-                  {dashboard.label} {formatMessage(messages.dashboard)}
+                  {dashboard.label} {formatMessage(messages.dashboard)}b
                 </Dropdown.Item>
               )}
               <Dropdown.Divider />
@@ -53,10 +53,10 @@ export const AuthenticatedUserDropdown = () => {
             </Dropdown.Item>
           )}
           <Dropdown.Item href={`${getConfig().ACCOUNT_PROFILE_URL}/u/${authenticatedUser.username}`}>
-            {formatMessage(messages.profile)}
+            프로필설정
           </Dropdown.Item>
           <Dropdown.Item href={getConfig().ACCOUNT_SETTINGS_URL}>
-            {formatMessage(messages.account)}
+            개인정보수정
           </Dropdown.Item>
           {getConfig().ORDER_HISTORY_URL && (
             <Dropdown.Item href={getConfig().ORDER_HISTORY_URL}>
@@ -65,10 +65,7 @@ export const AuthenticatedUserDropdown = () => {
           )}
           <Dropdown.Divider />
           <Dropdown.Item href={getConfig().LOGOUT_URL}>
-            {formatMessage(messages.signOut)}
-          </Dropdown.Item>
-          <Dropdown.Item href="#">
-            test
+            로그아웃
           </Dropdown.Item>
         </Dropdown.Menu>
       </Dropdown>

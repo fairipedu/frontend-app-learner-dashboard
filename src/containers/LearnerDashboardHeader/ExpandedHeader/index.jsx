@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { getConfig } from '@edx/frontend-platform';
 import { useIntl } from '@edx/frontend-platform/i18n';
-import { Button } from '@openedx/paragon';
+
 
 import urls from 'data/services/lms/urls';
 import { reduxHooks } from 'hooks';
@@ -10,7 +10,8 @@ import { reduxHooks } from 'hooks';
 import AuthenticatedUserDropdown from './AuthenticatedUserDropdown';
 import { useIsCollapsed, findCoursesNavClicked } from '../hooks';
 import messages from '../messages';
-import BrandLogo from '../BrandLogo';
+
+import Aside from '../../../components/Aside';
 
 export const ExpandedHeader = () => {
   const { formatMessage } = useIntl();
@@ -20,53 +21,15 @@ export const ExpandedHeader = () => {
   const exploreCoursesClick = findCoursesNavClicked(
     urls.baseAppUrl(courseSearchUrl),
   );
-
+  const [navOpen, setNavOpen] = useState('');
+  
   if (isCollapsed) {
     return null;
   }
 
   return (
     <header className="">
-      <div className="">
-        <BrandLogo />
-        <Button
-          as="a"
-          href="/"
-          variant="inverse-primary"
-          className="p-4 course-link"
-        >
-          {formatMessage(messages.course)}
-        </Button>
-        <Button
-          as="a"
-          href={urls.programsUrl()}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.program)}
-        </Button>
-        <Button
-          as="a"
-          href={urls.baseAppUrl(courseSearchUrl)}
-          variant="inverse-primary"
-          className="p-4"
-          onClick={exploreCoursesClick}
-        >
-          {formatMessage(messages.discoverNew)}
-        </Button>
-        <Button>테스트</Button>
-        <span className="flex-grow-1" />
-        <Button
-          as="a"
-          href={getConfig().SUPPORT_URL}
-          variant="inverse-primary"
-          className="p-4"
-        >
-          {formatMessage(messages.help)}
-        </Button>
-      </div>
-
-      <AuthenticatedUserDropdown />
+        <Aside />
     </header>
   );
 };
