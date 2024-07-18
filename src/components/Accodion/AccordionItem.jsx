@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useRef } from 'react';
 
 const AccordionItem = (props) => {
   const contentEl = useRef();
@@ -20,7 +20,7 @@ const AccordionItem = (props) => {
           : { height: "0px" }
         }>
         <div className="rc-accordion-body">
-          <p className="mb-0">-</p>
+          <p className="mb-0">{subNav}</p>
         </div>
       </div>
     </div>
