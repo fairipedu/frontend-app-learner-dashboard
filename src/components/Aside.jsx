@@ -9,31 +9,31 @@ export const Aside = () => {
       id: 1,
       header: '대시보드',
       icon: 'ri-home-5-fill',
-      subNav: []
+      subNav: [],
     },
     {
       id: 2,
       header: '교과 과정',
       icon: 'ri-book-2-fill',
-      subNav: ['나의강좌', '청강신청']
+      subNav: ['나의강좌', '청강신청'],
     },
     {
       id: 3,
       header: '비교과 과정',
       icon: 'ri-book-shelf-fill',
-      subNav: ['나의강좌', '강좌목록']
+      subNav: ['나의강좌', '강좌목록'],
     },
     {
       id: 4,
       header: '자율강좌',
       icon: 'ri-book-open-fill',
-      subNav: []
+      subNav: [],
     },
     {
       id: 5,
       header: '이용안내',
       icon: 'ri-chat-smile-fill',
-      subNav: []
+      subNav: [],
     }
   ];
   const [active, setActive] = useState(null);
