@@ -3,8 +3,17 @@ import PropTypes from 'prop-types';
 
 const AccordionItem = (props) => {
   const contentEl = useRef();
-  const { handleToggle, active, subNavList } = props;
-  const { header, id, icon, subNav } = subNavList;
+  const {
+    handleToggle,
+    active,
+    subNavList
+  } = props;
+  const {
+    header,
+    id,
+    icon,
+    subNav
+  } = subNavList;
 
   return (
     <div className="rc-accordion-card">
