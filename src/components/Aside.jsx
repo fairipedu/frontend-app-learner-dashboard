@@ -45,14 +45,12 @@ export const Aside = () => {
       setActive(idx);
     }
   };
-  let itemKey = -1;
   return (
     <>
       <BrandLogo />
       <ul className="fe-nav">
         {
           asideList.map((item) => {
-            itemKey += 1;
             return (
               <AccordionItem key={item.id} active={active} handleToggle={handleToggle} subNavList={item} />
             );
