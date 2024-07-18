@@ -38,24 +38,22 @@ export const Aside = () => {
   ];
   const [active, setActive] = useState(null);
 
-  const handleToggle = (index) => {
-    if (active === index) {
+  const handleToggle = (idx) => {
+    if (active === idx) {
       setActive(null);
     } else {
-      setActive(index);
+      setActive(idx);
     }
-  }
+  };
 
   return (
     <>
       <BrandLogo />
       <ul className="fe-nav">
         {
-          asideList.map((item, index) => {
-              return (
-                  <AccordionItem key={index} active={active} handleToggle={handleToggle} subNavList={item} />
-              )
-          })
+          asideList.map((item, idx) => (
+            <AccordionItem key={idx} active={active} handleToggle={handleToggle} subNavList={item} />
+          );
         }
       </ul>
     </>
