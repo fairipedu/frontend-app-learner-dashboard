@@ -44,9 +44,7 @@ const AccordionItem = (props) => {
     </div>
   );
 };
-AccordionItem.defaultProps = {
-  props: null,
-};
+
 AccordionItem.propsTypes = {
   props: PropTypes.shape({
     handleToggle: PropTypes.func,
@@ -55,8 +53,8 @@ AccordionItem.propsTypes = {
       header: PropTypes.string,
       id: PropTypes.string,
       icon: PropTypes.string,
-      subNav: PropTypes.arrayOf(PropTypes.string)
+      subNav: PropTypes.arrayOf(PropTypes.string),
     }),
-  })
+  }).isRequired;
 };
 export default AccordionItem;
