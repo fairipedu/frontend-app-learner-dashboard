@@ -49,12 +49,6 @@ AccordionItem.propsTypes = {
   props: PropTypes.shape({
     handleToggle: PropTypes.func.isRequired,
     active: PropTypes.string.isRequired,
-    subNavList: PropTypes.shape({
-      header: PropTypes.string,
-      id: PropTypes.string,
-      icon: PropTypes.string,
-      subNav: PropTypes.arrayOf(PropTypes.string),
-    }).isRequired,
   }).isRequired,
 };
 export default AccordionItem;
