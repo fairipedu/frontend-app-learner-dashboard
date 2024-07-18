@@ -13,7 +13,6 @@ export const AuthenticatedUserDropdown = () => {
   const { formatMessage } = useIntl();
   const { authenticatedUser } = React.useContext(AppContext);
   const dashboard = reduxHooks.useEnterpriseDashboardData();
-  
 
   return (
     authenticatedUser && (

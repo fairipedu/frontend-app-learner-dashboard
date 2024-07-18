@@ -4,7 +4,6 @@ import { useIsCollapsed } from '../hooks';
 import Aside from '../../../components/Aside';
 
 export const ExpandedHeader = () => {
-
   const isCollapsed = useIsCollapsed();
 
   if (isCollapsed) {
@@ -13,10 +12,9 @@ export const ExpandedHeader = () => {
 
   return (
     <header className="">
-        <Aside />
+      <Aside />
     </header>
   );
-
 };
 
 ExpandedHeader.propTypes = {};
