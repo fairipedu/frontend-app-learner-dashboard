@@ -1,13 +1,9 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 
-const AccordionItem = (props) => {
+const AccordionItem = (handleToggle, active, subNavList) => {
   const contentEl = useRef();
-  const {
-    handleToggle,
-    active,
-    subNavList,
-  } = props;
+
   const {
     header,
     id,
@@ -46,16 +42,14 @@ const AccordionItem = (props) => {
 };
 
 AccordionItem.propTypes = {
-  props: PropTypes.shape({
-    active: PropTypes.string,
-    handleToggle: PropTypes.func,
-    subNavList: PropTypes.shape({
-      header: PropTypes.string,
-      id: PropTypes.string,
-      icon: PropTypes.string,
-      subNav: PropTypes.arrayOf(PropTypes.string),
-    }),
-  }).isRequired,
+  active: PropTypes.string,
+  handleToggle: PropTypes.func,
+  subNavList: PropTypes.shape({
+    header: PropTypes.string,
+    id: PropTypes.string,
+    icon: PropTypes.string,
+    subNav: PropTypes.arrayOf(PropTypes.string),
+  }),
 };
 
 export default AccordionItem;
