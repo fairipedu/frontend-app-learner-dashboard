@@ -2,7 +2,7 @@ import React from 'react';
 
 import AuthenticatedUserDropdown from './ExpandedHeader/AuthenticatedUserDropdown';
 
-export const UserHeader = () => {
+const UserHeader = () => {
 
   return (
     <AuthenticatedUserDropdown />
