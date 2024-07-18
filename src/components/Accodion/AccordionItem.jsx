@@ -10,12 +10,12 @@ const AccordionItem = (active, handleToggle, subNavList) => {
     icon,
     subNav,
   } = subNavList;
-
+  const activeClass = (active === id) ? 'active' : '';
   return (
     <div className="rc-accordion-card">
       <div className="rc-accordion-header">
         <div
-          className={`rc-accordion-toggle p-3 ${active === id ? 'active' : ''}`}
+          className={`rc-accordion-toggle p-3 ${activeClass}`}
           onClick={() => handleToggle(id)}
           aria-hidden="true"
         >
@@ -26,7 +26,7 @@ const AccordionItem = (active, handleToggle, subNavList) => {
       </div>
       <div
         ref={contentEl}
-        className={`rc-collapse ${active === id ? 'show' : ''}`}
+        className={`rc-collapse ${activeClass}`}
         style={
           active === id
             ? { height: contentEl.current.scrollHeight }
