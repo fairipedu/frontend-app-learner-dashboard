@@ -55,6 +55,6 @@ AccordionItem.propsTypes = {
       icon: PropTypes.string,
       subNav: PropTypes.arrayOf(PropTypes.string),
     }),
-  }).isRequired;
+  }).isRequired,
 };
 export default AccordionItem;
