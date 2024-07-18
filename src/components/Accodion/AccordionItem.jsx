@@ -45,7 +45,7 @@ const AccordionItem = (props) => {
   );
 };
 
-AccordionItem.propsTypes = {
+AccordionItem.propTypes = {
   props: PropTypes.shape({
     handleToggle: PropTypes.func,
     active: PropTypes.number,
