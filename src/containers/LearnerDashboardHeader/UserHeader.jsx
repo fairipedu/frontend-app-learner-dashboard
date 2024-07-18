@@ -5,10 +5,9 @@ import AuthenticatedUserDropdown from './ExpandedHeader/AuthenticatedUserDropdow
 export const UserHeader = () => {
 
   return (
-
     <AuthenticatedUserDropdown />
+  )
 
-  );
 };
 
 export default UserHeader;
