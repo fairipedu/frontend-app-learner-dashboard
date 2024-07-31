@@ -15,6 +15,7 @@ const AccordionItem = ({
     subNav,
   } = subNavList;
   const activeClass = (active === id) ? 'active' : '';
+
   return (
     <div className="rc-accordion-card">
       <div className="rc-accordion-header">
@@ -25,7 +26,7 @@ const AccordionItem = ({
         >
           { /* subNav.length > 0 */}
           <h5 className="rc-accordion-title"><i className={icon} /> &nbsp; {header}</h5>
-          <i className="ri-arrow-down-s-line arrow" />
+          {(subNav.length > 0) ? (<i className="ri-arrow-down-s-line arrow" />) : '' }
         </div>
       </div>
       <div
@@ -37,9 +38,15 @@ const AccordionItem = ({
             : { height: '0px' }
         }
       >
-        <div className="rc-accordion-body">
-          <p className="mb-0">{subNav}</p>
-        </div>
+        {(subNav.length > 0)
+          ? (
+          <div className="rc-accordion-body">
+            { subNav.map((item) => (
+              <a href="#">{item}</a>
+            )) }
+          </div>
+        ) : ''}
+
       </div>
     </div>
   );

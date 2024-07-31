@@ -34,20 +34,38 @@
 .fe-nav {
   font-size:0.9em;
   color:#fff;
-  padding:0px; 
+  padding:0px;
   margin:0px;
-  .rc-accordion-toggle { 
+  .rc-accordion-toggle {
     position:relative;
-    &.active i {
+    &.active i.arrow {
       transform:rotate(180deg);
     }
   }
-  h5 { color:#fff; }
-  i.arrow { position:absolute; right:10px; top:8px}
+  h5 {
+    color:#fff;
+    padding:0px;
+    margin:0px;
+    i {
+      font-size:1.2em;
+      font-weight:300;
+      padding:0px;
+      margin:0px;
+      display:inline-block;
+    }
+  }
 
-  .rc-collapse { overflow:hidden;}
+  i.arrow { position:absolute; right:12px; top:11px}
+
+  .rc-collapse {
+    overflow:hidden;
+    .rc-accordion-body a {
+      margin:0px 15px 0px 25px;
+      font-size: 0.9em;
+    }
+  }
   * {font-family:"Pretendard", "맑은 고딕"}
-  
+
   > li > a {border-radius: 3px; }
   li {display:block; width:80%; margin:0px auto; padding:2px 0px;}
   ul {display:block; padding:0px 0px 0px 0px; margin:0px; width:100%; height:0px; overflow:none;}
@@ -59,13 +77,29 @@
   &::after {clear:both; content:""; display:block;}
   border:1px solid #dfdfdf;
   button {
-    float:right; 
+    float:right;
     background:transparent;
-    border:0px; outline:none;
-    &:focus {outline:none;}
+    border:0px;
+    outline:none !important;
+    box-shadow:none !important;
+    &:focus, &::before, &::after {
+      outline:none !important;
+      box-shadow:none !important;
+    }
   }
-  
-  
+}
+#user, .btn-avatar {
+  box-shadow:none !important;
+  outline:none !important;
+  &:focus {
+    outline:none !important;
+    box-shadow:none !important;
+  }
+  &::before, &::after {
+    outline:none !important;
+    box-shadow:none !important;
+  }
+
 }
 .btn-light.dropdown-toggle {
   background-color:transparent !important;
