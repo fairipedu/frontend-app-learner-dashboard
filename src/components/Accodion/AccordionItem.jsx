@@ -38,15 +38,17 @@ const AccordionItem = ({
             : { height: '0px' }
         }
       >
-        {(subNav.length > 0)
-          ? (
-          <div className="rc-accordion-body">
-            { subNav.map((item) => (
-              <a href="#">{item}</a>
-            )) }
-          </div>
-        ) : ''}
-
+        {
+          (subNav.length > 0)
+            ? (
+              <div className="rc-accordion-body">
+                { subNav.map((item) => (
+                  <a href="#!">{item}</a>
+                ))}
+              </div>
+            )
+            : ''
+        }
       </div>
     </div>
   );
