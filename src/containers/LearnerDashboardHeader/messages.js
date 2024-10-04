@@ -63,7 +63,7 @@ const messages = defineMessages({
   },
   logoAltText: {
     id: 'learnerVariantDashboard.logoAltText',
-    defaultMessage: 'edX, Inc. Dashboard',
+    defaultMessage: '한국기술교육대학교',
     description: 'Alt text for the edX logo.',
   },
   collapseMenuOpenAltText: {

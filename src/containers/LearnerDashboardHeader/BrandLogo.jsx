@@ -1,12 +1,12 @@
 import React from 'react';
 
+import { getConfig } from '@edx/frontend-platform';
+
 import { useIntl } from '@edx/frontend-platform/i18n';
 
 import { reduxHooks } from 'hooks';
 
 import messages from './messages';
-
-import { getConfig } from '@edx/frontend-platform';
 
 export const BrandLogo = () => {
   const { formatMessage } = useIntl();
